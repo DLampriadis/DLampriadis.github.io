@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en-NL">
+	<head>
+		<title>Material Mining in Barcelona</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="project_1 is-preload">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+		<script>
+			// Get the button:
+				let mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				    mybutton.style.display = "block";
+				  } else {
+				    mybutton.style.display = "none";
+				  }
+				}
+
+			// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0; // For Safari
+				  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+				}
+		</script>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+                    <main>
+                        <div class="header-img"></div>
+                    </main>
+					<!-- Logo -->
+						<h1><a href="index.html">Dimitrios Lampriadis</a></h1>
+						<p>Geospatial Data Analyst | Urban Planner-Technologist | Architect Engineer</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="projects.html">Projects</a>
+									<ul>
+										<li class="current"><a href="project_1.html">Material Mining in Barcelona</a></li>
+										<li><a href="project_2.html">Eixam(play): Analysing Footfall flows</a></li>
+										<li><a href="project_3.html">The Road Home</a></li>
+										<!-- <li>
+											<a href="#">Phasellus consequat</a>
+											<ul>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="#">Nisl sed aliquam</a></li>
+												<li><a href="#">Dolore adipiscing</a></li>
+											</ul>
+										</li> -->
+										<li><a href="project_4.html">Liquicity</a></li>
+										<li><a href="project_5.html">Eixam(play)</a></li>
+										<li><a href="project_6.html">Mapping Consumer Vulnerability</a></li>
+									</ul>
+								</li>
+								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+								<li class="current"><a href="#">Material Mining in Barcelona</a></li>
+								<li><a href="no-sidebar.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="icon-bar">
+						<a class="fa fa-envelope-open" aria-hidden="true" href="mailto: dimitrislampriadis@gmail.com"></a>
+						<a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/" target="blank"><span class="label">LinkedIn</span></a>
+						<a class="icon brands fa-github" href="https://github.com/DLampriadis" target="blank"><span class="label">github</span></a>
+						<a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis" target="blank"><span class="label">Twitter</span></a>
+						<a class="icon brands fa-instagram" href="https://www.instagram.com/dlampriadis_arch/" target="blank"><span class="label">Instagram</span></a>
+						<a class="icon brands fa-facebook" href="https://www.facebook.com/dimis.lamb" target="blank"><span class="label">Facebook</span></a>
+					</div>
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<a href="#" class="image featured"><img src="images/project1/map1.jpg" alt="" /></a>
+								<header>
+									<h2>Material Mining in Barcelona</h2>
+									<p>
+										An interface that supports the identification of building materials in the city of Barcelona. 
+									</p>
+								</header>
+								<h3><b>Introduction</b></h3>
+								<p>
+									The project provides an interface to visualize how six selected materials are 
+									distributed around Barcelona buildings according to the age of construction. 
+									By analyzing and mapping these results, we can identify which materials can be mined and where. 
+									This interface is used to develop the project of “Liquicity” as a proposal for expanding the city with optimal 
+									use of resources.
+								</p>
+								<p>Urban mining is the process of mining materials that are no longer in use, from demolished or refurbished buildings 
+									and using them for new constructions. This way the materials are up-cycled and there is less necessity of using new materials 
+									and consuming more resources. 
+								</p>
+								<h3><b>Digital Tools and Methods</b></h3>
+								<p>In order to quantify and identify the existing materials, it was used a machine learning process. 
+									By using Google Street View images, the software was trained to recognize six different materials in the façade of buildings. 
+									The materials are stone, concrete, brick, glass, metal, and wood.
+								</p>
+								<p>
+									Apart from quantifying the different materials, building age is also an important factor that was considered to produce the maps. 
+									As urban mining is the process of collecting materials that are no longer in use, we considered it important to identify building 
+									age as an indicator of buildings that could be mined. On the other hand, by knowing the building age we can predict that a certain 
+									construction method was used. For example, a building from before 1900 is most likely to have a wood structure.
+									First, we import/install the necessary libraries:
+								</p>
+								<details>
+									<summary><ins>Expand for the Code:</ins></summary>
+									<i># Libraries</i>
+									<pre><span style="color: #ff9900">import</span> plotly.graph_objects as go</pre>
+									<pre><span style="color: #ff9900">from</span> dash import Dash, dcc, html, Input, Output</pre>
+									<pre><span style="color: #ff9900">import</span>  plotly.express as px</pre>
+									<pre><span style="color: #ff9900">import</span> pandas as pd</pre>
+								</details>
+								<section>
+								<p>
+									<h3><b>Step 1: Creating and filtering the data</b></h3>
+								</p>
+								<p>
+									The used dataset (CSV file) was filtered and sorted using Pandas library in Python. 
+									That allowed a deeper analysis of the amount of each material on each building in the city. 
+									In order to visualize the necessary correlation of building ages with the materials, an extra condition had 
+									to be implemented in the process.
+								</p>
+								<details>
+									<summary><ins>Expand for the Code:</ins></summary>
+									<i># read data</i>
+									<pre>df = pd.read_csv(<span style="color: #396820">'data/alldata_wgs846.csv'</span>)</pre>
+								</details>
+								</section>
+								<section>
+									<header>
+										<h3><b>Step 2: Setting up the visualization of the map</b></h3>
+									</header>
+									<details>
+										<summary><ins>Expand for the Code:</summary></ins>
+										<i># setting up the app</i>
+										<pre>app = Dash(__name__)
+app.title = "Material Mining in Barcelona"
+										
+<span style="color: #808080"># setting up our figures</span>
+	colors = {
+			'background': '#FFFFFF',
+			'text': '#000000'
+			}
+	figure = px.scatter_mapbox(df, lat="y1", lon="x1", hover_name="ogc_fid", hover_data=["ogc_fid"],
+		zoom=12, height=780,  opacity=0.5, color=df["bld_age"],
+		color_continuous_scale=px.colors.sequential.matter,
+		title="Hover on the map to see the amount of materials each building has:",
+			)
+figure.update_layout(mapbox_style="carto-positron")
+figure.update_layout(margin={"r": 60, "t": 100, "l": 60, "b": 10})</pre>
+									</details>
+								</section>
+								<section>
+									<header>
+										<h3><b>Step 3: Setting up the layout of the dashboard</b></h3>
+									</header>
+<details>
+	<summary><ins>Expand for the Code:</summary></ins>
+	<i># setting up the layout</i>
+	<pre>app.layout = html.Div(
+		style={'backgroundColor': colors['background']}, children=[
+			html.A(
+						html.Img(id="logo", src=app.get_asset_url("logo.png")),
+						href="https://plotly.com/dash/",
+					),
+			html.H1(children="Material Mining in Barcelona", style={
+				'textAlign': 'left',
+				'color': colors['text']}),
+			html.H3(children='Measuring the amount of materials in buildings in Barcelona.', style={
+								'textAlign': 'left',
+								'color': colors['text']}
+					),
+			html.H6(children="A project developed in IAAC, Institute for Advanced Architecture of Catalonia developed at \
+								Master in City and Technology in 2021/2022"
+					),
+			html.H6(children="By students:Maria Augusta Kroetz, Dimitrios Lampriadis, Yohan Wadia, Julia Veiga, and \
+								Faculty: Diego Pajarito"
+					),
+			html.Div(
+				className="map",
+				children=[
+					html.Div(
+						className="eight columns",
+						children=[
+							html.Div(
+								children=dcc.Graph(
+									figure=figure,
+									id='map',
+									# hoverData={'points': [{'customdata': 3}]}
+									# hoverData={'points': [{'hovertext': 6980}]},
+									hoverData=None
+								)
+							)
+						]
+					)
+				]
+			),
+			html.Div(
+				className="histogram",
+				children=[
+					html.Div(
+						className="four and half columns",
+						children=[
+							html.Div(
+								children=dcc.Graph(id='histogram')
+							)
+						]
+					)
+				]
+			)
+		]
+	)</pre>
+</details>
+								</section>
+								<section>
+									<header>
+										<h3><b>Final step: setting up the callbacks</b></h3>
+									</header>
+<details>
+	<summary><ins>Expand for the Code:</summary></ins>
+	<i>#setting up the callbacks</i>
+	<pre><span style="color: #e7dc3c">@app.callback</span>(
+		Output('histogram', 'figure'),
+		Input('map', 'hoverData'))
+	def histogram(hoverData):
+		print("---------------------------")
+		# print(hoverData['points'][0])
+		if hoverData==None:
+			dff = df[df["ogc_fid"] == None]
+			histogram = px.histogram(df, x='ogc_fid',
+										y=["Stone", "Concrete", "Brick", "Glass", "Metal", "Wood"],
+										labels={'ogc_fid': 'building'}, title="Total amount of materials in Barcelona: ", height=780,
+										width=660,
+										color_discrete_sequence=px.colors.sequential.matter
+										)
+		else:
+			id = hoverData['points'][0]['hovertext']
+			# print(id)
+			dff = df[df["ogc_fid"] == id]
+			print(dff)
+			histogram = px.histogram(dff, x='ogc_fid',
+									y=["Stone", "Concrete", "Brick", "Glass", "Metal", "Wood"],
+									labels={'ogc_fid': 'building'}, title="Amount of materials in building ID: {0} ".format(
+											id
+										), height=780, width=660,
+									color_discrete_sequence=px.colors.sequential.matter
+									)
+		return histogram
+	if __name__ == '__main__':
+		app.run_server(debug=True)</pre>
+</details>
+								</section>
+								<center><img src="images/project1/Dashboard.gif" alt="" style="height: 450px; width: auto;"></center>
+								<section>
+									<h3><b>Conclusion</b></h3>
+									<p>The functionality of the dashboard is that users can understand and identify the 
+										capacity of cities as repositories of local construction materials in order to make 
+										upcycling of used materials a reality.
+									</p>
+									<p>
+										In the future, by adding more information to the interface, it will be possible to 
+										correlate more data and add more information and get a further understanding of upcycling. 
+										It can also provide users the capacity to expand the identification of not only materials but 
+										also other parts of the built environment.
+									</p>
+								</section>
+								<section>
+									<p>Sources: <a href="https://opendata-ajuntament.barcelona.cat/en" target="_blank">OpenBCN</a> / 
+										<a href="https://www.openstreetmap.org/#map=8/41.492/2.000" target="_blank">OpenStreetMap</a> /
+										<a href="https://www.google.com/maps/@41.4085966,2.2020852,11z" target="_blank">Google Street view</a>
+									</p>
+								</section>
+								<hr>
+								<section>
+									<p>
+										<b>Material mining in Barcelona</b> is a project of <a href="https://www.iaacblog.com/programs/material-mining-barcelona/" target="_blank">IAAC</a>, 
+										Institute for Advanced Architecture of Catalonia developed in the Master in City & Technology 2021/22 
+										by <b>Students:</b> Dimitrios Lampriadis, Julia Maria Ferreira Veiga, Maria Augusta Kroetz and Yohan Wadia 
+										<b>Faculty:</b> Diego Pajarito and Tugdual Sarazin
+									</p>
+								</section>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<!-- <div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Blandit nisl adipiscing</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Jan <strong>27</strong></span>
+											<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
+											<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>23</strong></span>
+											<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
+											<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>15</strong></span>
+											<h3><a href="#">Magna tempus lorem feugiat</a></h3>
+											<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>12</strong></span>
+											<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
+											<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>10</strong></span>
+											<h3><a href="#">Blandit tempus aliquam?</a></h3>
+											<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>What's this all about?</h2>
+									</header>
+									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+									<p>
+										This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
+										<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+										the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+									</p>
+									<footer>
+										<ul class="actions">
+											<li><a href="#" class="button">Find out more</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Tempus consequat</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Ipsum et phasellus</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div> -->
+							<!-- <div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Contact</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/"><span class="label">LinkedIn</span></a></li>
+										<li><a class="icon brands fa-github" href="https://github.com/DLampriadis"><span class="label">github</span></a></li>
+										<li><a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis"><span class="label">Twitter</span></a></li>
+									</ul>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												The Hague<br />
+												Goeverneurlaan, 2523CP<br />
+												The Netherlands
+											</p>
+										</li>
+										<li>
+											<h3>Mail</h3>
+											<p><a href="mailto: dimitrislampriadis@gmail.com">dimitrislampriadis@gmail.com</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>+31 (0) 626560148</p>
+										</li>
+									</ul>
+								</section>
+							</div> -->
+							<div class="col-12"> 
+
+								<!-- Copyright -->
+									<!-- <center><pre><a href="index.html">Home</a>    <a href="projects.html">Projects</a>    <a href="no-sidebar.html">About</a>    <a href="contact.html">Contact</a></pre>
+									</center><br> -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; 2022 - Dimitrios Lampriadis</li> 
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

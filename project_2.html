@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en-NL">
+	<head>
+		<title>Eixam(play): Analysing Footfall Flows</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="project_2 is-preload">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+		<script>
+			// Get the button:
+				let mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				    mybutton.style.display = "block";
+				  } else {
+				    mybutton.style.display = "none";
+				  }
+				}
+
+			// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0; // For Safari
+				  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+				}
+		</script>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+                    <main>
+                        <div class="header-img"></div>
+                    </main>
+					<!-- Logo -->
+						<h1><a href="index.html">Dimitrios Lampriadis</a></h1>
+						<p>Geospatial Data Analyst | Urban Planner-Technologist | Architect Engineer</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="projects.html">Projects</a>
+									<ul>
+										<li><a href="project_1.html">Material Mining in Barcelona</a></li>
+										<li class="current"><a href="project_2.html">Eixam(play): Analysing Footfall Flows</a></li>
+										<li><a href="project_3.html">The Road Home</a></li>
+										<!-- <li>
+											<a href="#">Phasellus consequat</a>
+											<ul>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="#">Nisl sed aliquam</a></li>
+												<li><a href="#">Dolore adipiscing</a></li>
+											</ul>
+										</li> -->
+										<li><a href="project_4.html">Liquicity</a></li>
+										<li><a href="project_5.html">Eixam(play)</a></li>
+										<li><a href="project_6.html">Mapping Consumer Vulnerability</a></li>
+									</ul>
+								</li>
+								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+								<li class="current"><a href="#">Eixam(play): Analysing Footfall Flows</a></li>
+								<li><a href="no-sidebar.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="icon-bar">
+						<a class="fa fa-envelope-open" aria-hidden="true" href="mailto: dimitrislampriadis@gmail.com"></a>
+						<a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/" target="blank"><span class="label">LinkedIn</span></a>
+						<a class="icon brands fa-github" href="https://github.com/DLampriadis" target="blank"><span class="label">github</span></a>
+						<a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis" target="blank"><span class="label">Twitter</span></a>
+						<a class="icon brands fa-instagram" href="https://www.instagram.com/dlampriadis_arch/" target="blank"><span class="label">Instagram</span></a>
+						<a class="icon brands fa-facebook" href="https://www.facebook.com/dimis.lamb" target="blank"><span class="label">Facebook</span></a>
+					</div>
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<a href="#" class="image featured"><img src="images/project2/intro.png" alt="" /></a>
+								<header>
+									<h2>Eixam(play): Analysing Footfall Flows</h2>
+									<p>
+										Eixam(play) is a studio project which looks at urban mobility in the context of urban ‘play’.
+									</p>
+								</header>
+								<h3><b>Introduction</b></h3>
+								<p>
+									Part of our analysis involved breaking down the footfalls data in Barcelona to understand these urban mobility patterns. 
+									We used Python to clean and filter the large dataset; we further used several scripts for our analysis and interpret the 
+									concentration in relation to mobility and ‘play’ environment spaces.
+								</p>
+								<p>
+									<details>
+										<summary><ins>Libraries used:</ins></summary>
+										<pre><span style="color: #ff9900">import</span> pandas as pd</pre>
+										<pre><span style="color: #ff9900">import</span> matplotlib</pre>
+										<pre><span style="color: #ff9900">import</span> matplotlib.pyplot as plt</pre>
+										<pre><span style="color: #ff9900">import</span> geopands as gpd</pre>
+										<pre><span style="color: #ff9900">from</span> shapely.geometry <span style="color: #ff9900">import</span> Point</pre>
+										<pre><span style="color: #ff9900">import</span> os</pre>
+										<pre><span style="color: #ff9900">import</span> sys</pre>
+										<pre><span style="color: #ff9900">import</span> movingpandas as mpd</pre>
+									</details>
+								</p>
+								<h3><b>Step 1: Clipping the area of interest</b></h3>
+								<p>First, we clipped the footfall data in Python by filtering by neighborhood, to our area of interest in Eixample.</p>
+								<img src="images/project2/footfalls.gif" alt="" style="height: auto; width: 434px; float: right; background-color: black; padding-top: 6%; padding-bottom: 6%;">
+								<img src="images/project2/map1.png" alt="" style="height: 450px; width: auto;"><br>
+								<section>
+									<h3><b>Step 2: Initial analysis</b></h3>
+									<p>
+										The next steps were to map the trajectories of people’s flows within and through Eixample to determine speed; 
+										by taking repeated random samples, we were able to extract an unbiased confidence interval of speed, 
+										to understand the categorization of mobility, as this would affect our intervention on each specified street.
+									</p>
+									<p>Our next steps were to group all the points by pulling each one to the nearest metro stop; 
+										We did this to extract information on concentration in major mobility hubs in our area of interest. 
+										Note that the encatchment area for busier stops is smaller, thus attracting fewer points within the timeframe selected; 
+										understanding this bias led us to examine the less connected areas of Eixample.
+									</p>
+									<img src="images/project2/Chart_01.png" alt="" style="height: auto; width: 434px; float: right; background-color: black; padding-top: 7.55%; padding-bottom: 7.55%;">
+									<img src="images/project2/map2.png" alt="" style="height: 450px; width: auto;">
+								</section>
+								<section>
+									<h3><b>Step 3: Further exploration</b></h3>
+									<p>
+										Further building on this, using a dataset of the road network, we projected each point onto the nearest line in the network 
+										using a closest point script, to identify the most frequently used roads and categorized the roads based on the concentration 
+										to aid in our identification of mobility corridors.
+									</p>
+									<p>
+										The final process was to extract information regarding the type of activity in the city and the footfalls data; we predefined 
+										environments in the city as natural, social, and cultural. By combining this with the footfalls, we were able to interpret 
+										the highest concentration of people at each environment and at what time of the day.
+									</p>
+									<img src="images/project2/map5.png" alt="" style="height: 450px; width: auto; float:right;">
+									<img src="images/project2/map4.png" alt="" style="height: 450px; width: auto;">
+								</section>
+								<section>
+									<h3><b>Conclusion</b></h3>
+									<p>To conclude, our analysis of the footfall dataset of Barcelona focused solely on Eixample, 
+										after understanding the distributions and characteristics of the data, to help us identify the relevant corridors, we compiled it with 
+										the road network and our pre-defined play environments of natural, social, and cultural, which revealed the urban mobility patterns according to 
+										time of day and highly concentrated areas, aiding our analysis of intervention zone.
+									</p>
+									<center><img src="images/project2/poster.png" alt="" style="height: auto; width: 100%;"></center>
+								</section>
+								<section>
+									<p>Sources: <a href="https://opendata-ajuntament.barcelona.cat/en" target="_blank">OpenBCN</a> / 
+									<a href="https://www.inatlas.com/" target="_blank">InAtlas</a> / 
+									<a href="https://www.openstreetmap.org/#map=8/41.492/2.000" target="_blank">OpenStreetMap</a>
+									</p>
+								</section>
+								<hr>
+								<section>
+									<p>
+										<b>Eixam(play)</b> is a project of <a href="https://www.iaacblog.com/programs/eixample-analysing-footfall-flows/" target="_blank">IAAC</a>, 
+										Institute for Advanced Architecture of Catalonia developed in the Master in City & Technology 2021/22 by 
+										<b>Students:</b> Dimitrios Lampriadis, Julia McGee, Lucas Zarzoso and Parshav Sheth,
+										<b>Faculty:</b> Diego Pajarito and Tugdual Sarazin
+									</p>
+								</section>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<!-- <div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Blandit nisl adipiscing</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Jan <strong>27</strong></span>
+											<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
+											<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>23</strong></span>
+											<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
+											<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>15</strong></span>
+											<h3><a href="#">Magna tempus lorem feugiat</a></h3>
+											<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>12</strong></span>
+											<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
+											<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>10</strong></span>
+											<h3><a href="#">Blandit tempus aliquam?</a></h3>
+											<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>What's this all about?</h2>
+									</header>
+									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+									<p>
+										This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
+										<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+										the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+									</p>
+									<footer>
+										<ul class="actions">
+											<li><a href="#" class="button">Find out more</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Tempus consequat</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Ipsum et phasellus</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div> -->
+							<!-- <div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Contact</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/"><span class="label">LinkedIn</span></a></li>
+										<li><a class="icon brands fa-github" href="https://github.com/DLampriadis"><span class="label">github</span></a></li>
+										<li><a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis"><span class="label">Twitter</span></a></li>
+									</ul>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												The Hague<br />
+												Goeverneurlaan, 2523CP<br />
+												The Netherlands
+											</p>
+										</li>
+										<li>
+											<h3>Mail</h3>
+											<p><a href="mailto: dimitrislampriadis@gmail.com">dimitrislampriadis@gmail.com</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>+31 (0) 626560148</p>
+										</li>
+									</ul>
+								</section>
+							</div> -->
+							<div class="col-12">
+
+								<!-- Copyright -->
+									<!-- <center><pre><a href="index.html">Home</a>    <a href="projects.html">Projects</a>    <a href="no-sidebar.html">About</a>    <a href="contact.html">Contact</a></pre>
+									</center><br> -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; 2022 - Dimitrios Lampriadis</li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
