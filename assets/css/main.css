@@ -101,7 +101,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Segoe UI Light'; /*Source Sans Pro / Montserrat*/
+		font-family: 'Segoe UI Regular'; /*Source Sans Pro / Montserrat*/
 		font-weight: 300;
 		color: #5d5d5d;
 		font-size: 14pt;
@@ -118,8 +118,8 @@ input, select, textarea {
 	}
 
 	em {
-		color: white;
-		background-color: #DB886A;
+		color: black;
+		background-color: none;
 		font-size: 120%;
 		font-weight: 1000;
 		padding-left: 0.3%;
@@ -1667,8 +1667,8 @@ input, select, textarea {
 	#myBtn {
 		display: none; /* Hidden by default */
 		position: fixed; /* Fixed/sticky position */
-		bottom: 10px; /* Place the button at the bottom of the page */
-		left: 165px; /* Place the button 30px from the right | 30px*/
+		bottom: 10px; /* Place the button at the bottom of the page | 10px*/
+		left: 5%; /* Place the button 30px from the right | 30px | 165px*/
 		z-index: 99; /* Make sure it does not overlap */
 		border: none; /* Remove borders */
 		outline: none; /* Remove outline */
@@ -2059,7 +2059,7 @@ input, select, textarea {
 
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 		.icon-bar {
-			margin: 6.5em 0 0 9em; /* 6.5em 0 0 9em */
+			margin: 5% 5%; /* 6.5em 0 0 9em */
 			position: fixed;
 			top: 50%;
 			-webkit-transform: translateY(-50%);
@@ -2533,13 +2533,13 @@ input, select, textarea {
 
 			.icon-bar {
 				display: block;
-				margin: 50px 0 0 0px;
+				margin: 4% 0%; /*50px 0 0 0px*/
 			}
 
 		/* myBtn */
 
 			#myBtn {	
-				margin: 50px 0 0 -165px;
+				margin: 50px 0 0 -165px; /*50px 0 0 -165px*/
 			}
 
 		/* Header */
@@ -2650,7 +2650,7 @@ input, select, textarea {
 
 			.icon-bar {
 				display: block;
-				margin: 50px 0 0 0px;
+				margin: 5% 0%; /*50px 0 0 0px*/
 			}
 
 		/* myBtn */
@@ -2844,7 +2844,12 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: #888;
+				}
+
+				#navPanel .depth-1 {
+					color: #888;
+					height: auto;
 				}
 
 			body.navPanel-visible #page-wrapper {
@@ -2968,7 +2973,7 @@ input, select, textarea {
 
 			.icon-bar {
 				display: block;
-				margin: -10px 0 0 0px;
+				margin: 5% 0; /*-10px 0 0 0px*/
 			}
 
 		/* Contact */
@@ -3088,3 +3093,22 @@ input, select, textarea {
 			}
 
 	}
+
+/* Extra Small */
+
+@media screen and (max-width: 520px) {
+	/* icon-bar */
+
+	.icon-bar {
+		display: block;
+		position: fixed;
+		margin: 5% -5%; /*-10px 0 0 0px*/
+	}
+	
+	/* Main */
+
+	#main {
+		padding: 20px 5%;
+	}
+
+}
