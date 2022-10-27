@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en-NL">
+	<head>
+		<title>[Echo]nnect:</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="project_5 is-preload">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+		<script>
+			// Get the button:
+				let mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				    mybutton.style.display = "block";
+				  } else {
+				    mybutton.style.display = "none";
+				  }
+				}
+
+			// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0; // For Safari
+				  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+				}
+		</script>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+                    <main>
+                        <div class="header-img"></div>
+                    </main>
+					<!-- Logo -->
+						<h1><a href="index.html">Dimitrios Lampriadis</a></h1>
+						<p>Geospatial Data Analyst | Urban Planner-Technologist | Architect Engineer</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="projects.html">Projects</a>
+									<ul>
+										<li><a href="project_1.html">Material Mining in Barcelona</a></li>
+										<li><a href="project_2.html">Eixam(play): Analysing Footfall Flows</a></li>
+										<li><a href="project_3.html">The Road Home</a></li>
+										<!-- <li>
+											<a href="#">Phasellus consequat</a>
+											<ul>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="#">Nisl sed aliquam</a></li>
+												<li><a href="#">Dolore adipiscing</a></li>
+											</ul>
+										</li> -->
+										<li><a href="project_4.html">Liquicity</a></li>
+										<li><a href="project_5.html">Eixam(play)</a></li>
+										<li><a href="project_6.html">Mapping Consumer Vulnerability</a></li>
+										<li class="current"><a href="project_7.html">[Echo]nnect:</a></li>
+									</ul>
+								</li>
+								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+								<li class="current"><a href="#">[Echo]nnect:</a></li>
+								<li><a href="no-sidebar.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="icon-bar">
+						<a class="fa fa-envelope-open" aria-hidden="true" href="mailto: dimitrislampriadis@gmail.com"></a>
+						<a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/" target="blank"><span class="label">LinkedIn</span></a>
+						<a class="icon brands fa-github" href="https://github.com/DLampriadis" target="blank"><span class="label">github</span></a>
+						<a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis" target="blank"><span class="label">Twitter</span></a>
+						<a class="icon brands fa-instagram" href="https://www.instagram.com/dlampriadis_/" target="blank"><span class="label">Instagram</span></a>
+						<a class="icon brands fa-facebook" href="https://www.facebook.com/dimis.lamb" target="blank"><span class="label">Facebook</span></a>
+					</div>
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<center>COMING SOON</center>
+								<!-- <a href="#" class="image featured"><img src="images/project6/Greater_London.png" style="height: 75%; width: 75%;" alt="" /></a>
+								<header>
+									<h2>[Echo]nnect:</h2>
+									<p>
+										Mutualistic symbiosis driving back nature in the Greater London area.
+									</p>
+								</header>
+								<h3><b>Context</b></h3>
+								<p>
+									Our term studio project ‘Drive in Nature’ asks the question; in a world without cars, 
+									what would happen to major motorways and junctions, and how could we utilise them to 
+									bring nature back into the city? The project is based in London, UK, and the surrounding metropolitan area. 
+									We focus on the fragmentation caused by human built infrastructure, the use of biodiversity as an indicator of 
+									ecosystem services, and how we can connect surrounding communities with the nature of the area they are living in. 
+									After analysing flows on Circuitscape and mapping land use in Greater London and surrounding areas, we decided 
+									to focus on a section of the A406 motorway near the Epping Forest. With this potential intervention area in mind, 
+									we needed to research the characteristics of the people and surrounding regions to understand what kind of 
+									repurposing would make sense in the area. Thus, we began gathering data from a variety of sources about the communities there.
+								</p>
+								<h3><b>Data</b></h3>
+								<p>
+									The majority of the data used in our project has been publicly available in shapefile form. However, one of the challenges 
+									presented to us was needing to map data that was not properly geocoded. 
+								</p>
+								<p>
+									As part of our research for our proposed intervention on the selected area on the A406, we looked for data on socio-economic and demographic 
+									data on the communities in the area. This led us to the Consumer Data Research Centre <a href="https://www.cdrc.ac.uk/" target="_blank">(CDRC)</a>, which has a variety of spatial data (in CSV form) 
+									on demographics, health variables, accessibility metrics, etc. One of the indicators was ‘consumer vulnerability’, which is defined as a measure 
+									of how physically, mentally, and financially vulnerable a person is during a market interaction. 
+								</p>
+								<section>
+								<img src="images/project6/data_1.PNG" alt="" style="height: 45%; width: 45%; float: left; margin-right: 25px;">
+									<p align="justify">
+										The data was organized into six categories 
+										labelled from A to F based on these variables, with A as the lowest risk and F as the highest risk. Both these variables and the regions were 
+										defined based on 2011 Census data. Census data is organized by postal codes called the ONS Coding System and this particular dataset was coded by ‘Output Area’ (OA), 
+										which are regions of the smallest scale. Unfortunately, these in their CSV form have no geospatial qualities for mapping.
+										The file we have for geolocated data is a shapefile published by the Office for National Statistics (ONS). 
+										It has many columns of different postal codes in the UK, but the relevant one to us is the 2011 OA codes, the same as in the consumer vulnerability CSV. 
+										Thus, by merging the consumer vulnerability CSV and the geocoded shapefile through the common column of the OA codes, we obtain one dataset to be used 
+										to map the consumer vulnerability index. 
+									</p><br>
+									<center><img src="images/project6/process_flowchart.png" alt="" style="height: 80%; width: 80%;"></center>
+								</section>
+								<section>
+									<h3><b>Digital tools & Big Data...so far</b></h3>
+									<p>
+										The Digital Tools & Big Data I course has provided a solid foundation as an introduction to data science by using the Pycharm interface to learn 
+										the Python coding language. Starting from the basics of understanding environments and running basic commands, there has been a particular 
+										emphasis on learning about different types of data files and how to work with geospatial data in Python. An extremely powerful tool for data 
+										analysis, using Python for such has many advantages, including creating maps with large amounts of data, or writing code to create many maps quickly 
+										for a comparative analysis. For us, one powerful application of Python is using it to combine different file types to have geospatial data in a readable form. 
+									</p>
+								</section>
+								<section>
+									<h3><b>Method in Geopandas</b></h3>
+									<p>
+										Our first step is to import the ‘geopandas’ library, an extension of the ‘pandas’ library. 
+										Pandas is a library used to create data frames for statistical analysis, dividing the data into readable columns; geopandas incorporates all these 
+										features and adds the ability to work with geocoded data.
+									</p>
+									<details>
+										<summary><ins>Expand for the Code:</ins></summary>
+										<i># Libraries</i>
+										<pre><span style="color: #ff9900">import</span> geopandas</pre>
+										<pre><span style="color: #ff9900">import</span>  pandas <span style="color: #ff9900">as</span> pd</pre>
+										<pre><span style="color: #ff9900">import</span> numpy <span style="color: #ff9900">as</span> np</pre>
+										<pre><span style="color: #ff9900">import</span> matplotlib.pyplot <span style="color: #ff9900">as</span> plt</pre>
+										<pre><span style="color: #ff9900">from</span> mpl_toolkits.axes_grid1 <span style="color: #ff9900">import</span> make_axes_locatable</pre>
+									</details><br>
+									<p>
+										The next step was to read our geospatial data. We defined an object as the shapefile with the OA postal codes and created a dataframe by instructing Python 
+										to read our object using geopandas; this gave us our first dataframe. The second step was similar to the first, to read our CSV file of consumer vulnerability. 
+										We defined an object as the relevant file with the consumer index and then created a dataframe. Note that this time we use ‘pandas’ to read the file because there 
+										is no geocoded data here. This will allow for easier merging of the files as the CSV will take the geo properties (e.g. CRS) of the shapefile.
+									</p>
+									<details>
+										<summary><ins>Expand for the Code:</ins></summary>
+										<i><span style="color: #808080"># read geospatial data</span></i>
+										<p>
+											shape = '../data/geospatial_data/OA_2011_London_gen_MHW.shp'<br>
+											g_shape = geopandas.read_file(shape)
+										</p>
+										<i><span style="color: #808080"># read CSV data</span></i>
+										<p>
+											csv = '../data/consumer.csv'<br>
+											p_csv = pd.read_csv(csv)
+										</p>
+									</details>
+									<img src="images/project6/data_2.PNG" alt="" style="height: 100%; width: 100%;">
+									<p>
+										After these two steps we have two dataframes, one with our location data and one with our consumer data, which share a common column of OA codes.
+									</p>
+									<p>
+										There were some issues with the naming of the columns; due to the shapefile having many columns of the ONS Codes themselves having some 
+										columns with overlapping characters, we needed to ensure we were merging by the correct column. For this, before merging, we made two 
+										updated dataframes where we specified that the column with the OA codes should only be read by the last six characters. After this process, 
+										we finally were able to correctly merge the files by running a line of code with the ‘merge’ command, specifying to merge the shapefile and the 
+										CSV by the last six digits of the previously defined column. Further, a line of code to print the column values was run to double check the process 
+										had been done correctly; finally, we could save the merged file as a shapefile by using the to.file command and defining the driver as an ESRI shapefile.
+									</p>
+									<details>
+										<summary><ins>Expand for the Code:</ins></summary>
+										<i><span style="color: #808080"># merge data</span></i>
+										<p>
+											g_shape['last6'] = g_shape['OA11CD'].str[3:]<br>
+											p_csv['last6'] = p_csv['output_area'].str[3:]<br>
+											c_merged = g_shape.merge(p_csv, right_on='last6', left_on= 'last6', how='left')
+										</p>
+									</details>
+									<p>
+										We use two methods for mapping; one map created in Python and two using the new shapefile in QGIS for further stylizing. The following map is generated in Python.
+									</p>
+									<center><img src="images/project6/Python_map.png" alt="" style="height: 60%; width: 60%;"></center><br>
+									<p>
+										From this we understand a basic overview of the different clusters of consumer vulnerability in the city. For more detail and analysis, we used QGIS.
+									</p>
+									<center><img src="images/project6/Greater_London.png" alt="" style="height: 60%; width: 60%;"></center><br>
+									<p>
+										Our map of consumer vulnerability in Greater London; white indicates lower vulnerability and dark pink indicates higher vulnerability. Our indicator 
+										is a measure of financial, physical, and mental vulnerability during a market interaction as a consumer.
+									</p>
+									<center><img src="images/project6/Intervention_zone.png" alt="" style="height: 60%; width: 60%;"></center><br>
+									<p>
+										This map shows the proposed intervention zone along the A406 motorway; we learn from the characteristics of 
+										the surrounding communities to inform us about what kinds of intervention would be beneficial. 
+									</p>
+									<details>
+										<summary><ins>Expand for the Code:</ins></summary>
+										<i><span style="color: #808080"># plot data</span></i>
+										<p>
+											print(c_merged.columns.values.tolist())<br>
+											c_merged.plot(column ='cluster', edgecolor='none', linewidth=0.5)<br>
+											plt.show()<br>
+											c_merged.to_file(filename='cons_merged.shp', driver='ESRI Shapefile')
+										</p>
+									</details>
+									<p>
+										This process allowed us to map the area of our proposed intervention to further understand the community and the people in the surrounding area. 
+										From this map, we are able to determine that on the West side of our section is a more affluent and less vulnerable area, whereas on the East 
+										there is a higher risk neighbourhood. This has led us to propose an ecological corridor naturally extending from the edge of the Epping Forest and the 
+										lower risk area to connect with the higher risk area. We can extrapolate how creating an ecological corridor along this motorway to drive biodiversity
+										back into the city and connect these two regions would be beneficial for the lower-income community; understanding these demographics is crucial for 
+										us to ensure we are proposing appropriate intervention. Learning the process of merging different files with Python allowed us to begin such analysis.
+									</p>
+								</section>
+								<section>
+									<h3><b>Conclusion</b></h3>
+									<p>
+										The process of learning how to merge CSV and shapefiles has proved very useful for us. We can now use data previously unable to be mapped to analyse the 
+										communities in the area and help develop the appropriate intervention zones for our term studio project. Moving forward, this process of combining files 
+										can be repeated for other indicators and will prove to be imperative as we continue to work with non-spatial data that needs to be represented visually.
+									</p>
+								</section>
+								<section>
+									<p>Sources: <a href="https://data.london.gov.uk/dataset/focus-on-london-income-and-spending" target="_blank">London Datastore</a> / 
+										<a href="http://planning.data.tfl.gov.uk/" target="_blank">Planning Data</a> / 
+										<a href="https://safecities.economist.com/" target="_blank">SafeCities</a> / 
+										<a href="https://naturalengland-defra.opendata.arcgis.com/" target="_blank">Natural England</a>
+									</p>
+								</section>
+								<hr>
+								<section>
+									<p>
+										<b>Mapping Consumer Vulnerability</b> is a project of <a href="https://www.iaacblog.com/programs/mapping-consumer-vulnerability/" target="_blank">IAAC</a>, 
+										Institute for Advanced Architecture of Catalonia developed in the Master in City & Technology 2021/22 by 
+										<b>Students:</b> Dimitrios Lampriadis, Julia McGee, Joseph Bou Saleh, Kriti Nirmal,
+										<b>Faculty:</b> Diego Pajarito.
+									</p>
+								</section>
+							</article>
+
+					</div>
+				</section> -->
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<!-- <div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Blandit nisl adipiscing</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Jan <strong>27</strong></span>
+											<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
+											<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>23</strong></span>
+											<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
+											<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>15</strong></span>
+											<h3><a href="#">Magna tempus lorem feugiat</a></h3>
+											<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>12</strong></span>
+											<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
+											<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>10</strong></span>
+											<h3><a href="#">Blandit tempus aliquam?</a></h3>
+											<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>What's this all about?</h2>
+									</header>
+									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+									<p>
+										This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
+										<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+										the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+									</p>
+									<footer>
+										<ul class="actions">
+											<li><a href="#" class="button">Find out more</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Tempus consequat</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<header>
+										<h2>Ipsum et phasellus</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									</ul>
+								</section>
+							</div> -->
+							<!-- <div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Contact</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/dimitrios-lampriadis-70b00212a/"><span class="label">LinkedIn</span></a></li>
+										<li><a class="icon brands fa-github" href="https://github.com/DLampriadis"><span class="label">github</span></a></li>
+										<li><a class="icon brands fa-twitter" href="https://twitter.com/DLampriadis"><span class="label">Twitter</span></a></li>
+									</ul>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												The Hague<br />
+												Goeverneurlaan, 2523CP<br />
+												The Netherlands
+											</p>
+										</li>
+										<li>
+											<h3>Mail</h3>
+											<p><a href="mailto: dimitrislampriadis@gmail.com">dimitrislampriadis@gmail.com</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>+31 (0) 626560148</p>
+										</li>
+									</ul>
+								</section>
+							</div> -->
+							<div class="col-12">
+
+								<!-- Copyright -->
+									<!-- <center><pre><a href="index.html">Home</a>    <a href="projects.html">Projects</a>    <a href="no-sidebar.html">About</a>    <a href="contact.html">Contact</a></pre>
+									</center><br> -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; 2022 - Dimitrios Lampriadis</li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
